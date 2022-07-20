@@ -1,0 +1,76 @@
+*, ::before, *::after{
+    box-sizing: border-box ;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to left, red, yellow);
+    min-height: 100vh;
+}
+
+.btn{
+    outline: none;
+    border: black solid 1px;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+    color: white;
+    
+}
+.btn:hover{
+    background-color: blue;
+}
+.btn:focus{
+    background-color: green;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+    grid-template-rows:  minmax(150px, auto) repeat(5, 1fr);
+    
+    
+    
+}
+.display{
+    background-color: rgba(23, 32, 4, 0.4);
+    padding: 7px;
+}
+.current-operand{
+    text-align: end;
+    color: white;
+    font-size: 30px;
+    
+}
+
+.previous-operand{
+    height: 20px;
+    text-align:center;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 25px;
+
+}
+
+
+
+.span4{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    
+}
+
+.span2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.clear, .plusminus, .percent{
+    background-color: rgba(132, 126, 128, 0.598);
+}
+.number{
+    background-color: rgba(148, 150, 142, 0.351);
+}
+.plus, .minus, .multiply, .divide, .equals{
+    background-color: rgb(187, 119, 8);
+}
